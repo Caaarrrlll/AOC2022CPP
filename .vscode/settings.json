@@ -3,5 +3,7 @@
 		"list": "cpp",
 		"string": "cpp",
 		"vector": "cpp"
-	}
+	},
+	"editor.tabSize": 4,
+	"editor.insertSpaces": false
 }
