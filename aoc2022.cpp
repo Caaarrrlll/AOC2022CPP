@@ -11,6 +11,7 @@ using namespace std;
 
 vector<int> aocChallenge1();
 void aocChallenge2();
+void challenge3();
 
 int main(int argc, char *argv[]){
     int parse = -1;
@@ -39,6 +40,11 @@ int main(int argc, char *argv[]){
             printf("See Comments in Challenge 2 for description on part one and 2\n");
             printf("Challenge 2: ");
             aocChallenge2();
+            break;
+        }
+        case 3: {
+            printf("Challenge 3: ");
+            challenge3();
             break;
         }
         default:{
@@ -231,3 +237,5 @@ void aocChallenge2(){
         printf("%d\n", totalScore);
     }
 }
+
+void challenge3(){}
