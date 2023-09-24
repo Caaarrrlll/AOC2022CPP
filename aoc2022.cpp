@@ -11,7 +11,7 @@ using namespace std;
 
 vector<int> aocChallenge1();
 void aocChallenge2();
-void challenge3();
+void aocChallenge3();
 
 int main(int argc, char *argv[]){
     int parse = -1;
@@ -44,7 +44,7 @@ int main(int argc, char *argv[]){
         }
         case 3: {
             printf("Challenge 3: ");
-            challenge3();
+            aocChallenge3();
             break;
         }
         default:{
@@ -238,4 +238,6 @@ void aocChallenge2(){
     }
 }
 
-void challenge3(){}
+void aocChallenge3(){
+    
+}
