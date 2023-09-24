@@ -13,9 +13,9 @@
 
 using namespace std;
 
-vector<int> aocChallenge1();
-void aocChallenge2();
-void aocChallenge3();
+// vector<int> aocChallenge1();
+// void aocChallenge2();
+// void aocChallenge3();
 
 int main(int argc, char *argv[]){
     int parse = -1;
@@ -47,7 +47,7 @@ int main(int argc, char *argv[]){
             break;
         }
         case 3: {
-            printf("Challenge 3: ");
+            printf("Challenge 3: \n");
             aocChallenge3();
             break;
         }
