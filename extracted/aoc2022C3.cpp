@@ -18,5 +18,5 @@ void aocChallenge3(){
 			printf("%s\n", compartment1.c_str());
 			printf("%s\n", compartment2.c_str());
 		}
-}
+	}
 }
