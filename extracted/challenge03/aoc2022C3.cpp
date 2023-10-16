@@ -6,12 +6,6 @@ using namespace std;
 
 void aocChallenge3()
 {
-	fstream challenge2File;
-	challenge2File.open("extracted/challenge03/challenge03.txt", ios::in);
-	string tp;
-	string compartment1;
-	string compartment2;
-
 	map<char, int> compartmentMap = {
 		{'a', 1},
 		{'b', 2},
@@ -66,37 +60,62 @@ void aocChallenge3()
 		{'Y', 51},
 		{'Z', 52}};
 
+	ifstream challenge2File;
+	// challenge2File.open("extracted/challenge03/challenge03.txt", ios::in);
+	challenge2File.open("extracted/challenge03/sample.txt", ios::in);
+
 	if (challenge2File.is_open())
 	{
 		int totalPriority = 0;
-		while (getline(challenge2File, tp))
+		string tp;
+
+		// *** Part 1 *** //
+		// while (getline(challenge2File, tp))
+		// {
+		// 	string compartment1 = tp.substr(0, tp.length() / 2);
+		// 	string compartment2 = tp.substr((tp.length() / 2), tp.length() / 2);
+
+		// 	vector<char> matchingPriorities = vector<char>();
+
+		// 	for (int i = 0; i < compartment1.length(); i++)
+		// 	{
+		// 		for (int j = 0; j < compartment2.length(); j++)
+		// 		{
+		// 			if (compartment1[i] == compartment2[j])
+		// 			{
+		// 				matchingPriorities.push_back(compartment1[i]);
+		// 			}
+		// 		}
+		// 	}
+
+		// 	auto it = unique(matchingPriorities.begin(), matchingPriorities.end());
+
+		// 	matchingPriorities.resize(distance(matchingPriorities.begin(), it));
+
+		// 	for (int k = 0; k < matchingPriorities.size(); k++)
+		// 	{
+		// 		totalPriority += compartmentMap[matchingPriorities[k]];
+		// 	}
+		// }
+
+		// *** Part 2 *** //
+		int lineCount = 0;
+		map<int, string> elves;
+		while (getline(challenge2File, elves[lineCount++]))
 		{
-			compartment1 = tp.substr(0, tp.length() / 2);
-			compartment2 = tp.substr((tp.length() / 2), tp.length() / 2);
+			if(lineCount >= 3){
 
-			vector<char> matchingPriorities = vector<char>();
-
-			for (int i = 0; i < compartment1.length(); i++)
-			{
-				for (int j = 0; j < compartment2.length(); j++)
-				{
-					if (compartment1[i] == compartment2[j])
-					{
-						matchingPriorities.push_back(compartment1[i]);
-					}
-				}
-			}
-
-			auto it = unique(matchingPriorities.begin(), matchingPriorities.end());
-
-			matchingPriorities.resize(distance(matchingPriorities.begin(), it));
-
-			for (int k = 0; k < matchingPriorities.size(); k++)
-			{
-				totalPriority += compartmentMap[matchingPriorities[k]];
 			}
 		}
 
 		printf("Total Priority: %d\n", totalPriority);
 	}
+
+	challenge2File.close();
+}
+
+int calcPriorities(map<int, string> elfTeam){
+
+
+	return 0;
 }
