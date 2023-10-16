@@ -7,7 +7,7 @@ using namespace std;
 void aocChallenge3()
 {
 	fstream challenge2File;
-	challenge2File.open("challenge3.txt", ios::in);
+	challenge2File.open("extracted/challenge03/challenge03.txt", ios::in);
 	string tp;
 	string compartment1;
 	string compartment2;

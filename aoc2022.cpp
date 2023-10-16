@@ -2,8 +2,8 @@
 #include <vector>
 
 #include "extracted/challenge01/aoc2022C1.cpp"
-#include "extracted/aoc2022C2.cpp"
-#include "extracted/aoc2022C3.cpp"
+#include "extracted/challenge02/aoc2022C2.cpp"
+#include "extracted/challenge03/aoc2022C3.cpp"
 
 using namespace std;
 
@@ -26,7 +26,7 @@ int main(int argc, char *argv[])
         printf("Challenge 1 Part 1: ");
         vector<int> challenge1Vector = aocChallenge1();
         printf("%d\n", challenge1Vector[challenge1Vector.size() - 1]);
-        printf("Challenge 1 Part 2: ");
+        printf("Challenge 1 Part 2: \n");
         int top3 = 0;
         for (int i = 3; i > 0; i--)
         {
@@ -38,7 +38,7 @@ int main(int argc, char *argv[])
     case 2:
     {
         printf("See Comments in Challenge 2 for description on part one and 2\n");
-        printf("Challenge 2: ");
+        printf("Challenge 2: \n");
         aocChallenge2();
         break;
     }

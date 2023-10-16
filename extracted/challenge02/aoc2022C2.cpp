@@ -2,14 +2,16 @@
 
 using namespace std;
 
-void aocChallenge2(){
+void aocChallenge2()
+{
     fstream challenge2File;
-    challenge2File.open("challenge2.txt", ios::in);
+    challenge2File.open("extracted/challenge02/challenge02.txt", ios::in);
     string tp;
     int totalScore = 0;
     int roundScore = 0;
 
-    if (challenge2File.is_open()){
+    if (challenge2File.is_open())
+    {
         // *** Part 1 *** //
         // while (getline(challenge1File, tp)){
         //     roundScore = 0;
@@ -83,7 +85,8 @@ void aocChallenge2(){
         // }
 
         // *** Part 2 *** //
-        while(getline(challenge2File, tp)){
+        while (getline(challenge2File, tp))
+        {
             roundScore = 0;
 
             // Rock for player = 1 Point
@@ -93,58 +96,72 @@ void aocChallenge2(){
             // 0 Points for loss = X
             // 3 Points for tie = Y
             // 6 Points for win = Z
-            switch (tp[0]){
-                case 'A':{
-                    // Elf Played Rock
-                    if(tp[2] == 'X'){
-                        // Player Plays Scissors
-                        roundScore += 3;
-                    }
-                    if(tp[2] == 'Y'){
-                        // Player Plays Rock
-                        roundScore += 1;
-                        roundScore += 3;
-                    }
-                    if(tp[2] == 'Z'){
-                        // Player Plays Paper
-                        roundScore += 2;
-                        roundScore += 6;
-                    }
-                    break;
+            switch (tp[0])
+            {
+            case 'A':
+            {
+                // Elf Played Rock
+                if (tp[2] == 'X')
+                {
+                    // Player Plays Scissors
+                    roundScore += 3;
                 }
-                case 'B':{
-                    // Elf Played Paper
-                    if(tp[2] == 'X'){
-                        // Player Plays Rock
-                        roundScore += (1);
-                    }
-                    if(tp[2] == 'Y'){
-                        // Player Plays Paper
-                        roundScore += (2 + 3);
-                    }
-                    if(tp[2] == 'Z'){
-                        // Player Plays Scissors
-                        roundScore += (3 + 6);
-                    }
-                    break;
+                if (tp[2] == 'Y')
+                {
+                    // Player Plays Rock
+                    roundScore += 1;
+                    roundScore += 3;
                 }
-                case 'C':{
-                    // Elf Played Scissors
-                    if(tp[2] == 'X'){
-                        // Player Plays Paper
-                        roundScore += (2);
-                    }
-                    if(tp[2] == 'Y'){
-                        // Player Plays Scissors
-                        roundScore += (3 + 3);
-                    }
-                    if(tp[2] == 'Z'){
-                        // Player Plays Rock
-                        roundScore += (1 + 6);
-                    }
-                    break;
+                if (tp[2] == 'Z')
+                {
+                    // Player Plays Paper
+                    roundScore += 2;
+                    roundScore += 6;
                 }
-                default: break;
+                break;
+            }
+            case 'B':
+            {
+                // Elf Played Paper
+                if (tp[2] == 'X')
+                {
+                    // Player Plays Rock
+                    roundScore += (1);
+                }
+                if (tp[2] == 'Y')
+                {
+                    // Player Plays Paper
+                    roundScore += (2 + 3);
+                }
+                if (tp[2] == 'Z')
+                {
+                    // Player Plays Scissors
+                    roundScore += (3 + 6);
+                }
+                break;
+            }
+            case 'C':
+            {
+                // Elf Played Scissors
+                if (tp[2] == 'X')
+                {
+                    // Player Plays Paper
+                    roundScore += (2);
+                }
+                if (tp[2] == 'Y')
+                {
+                    // Player Plays Scissors
+                    roundScore += (3 + 3);
+                }
+                if (tp[2] == 'Z')
+                {
+                    // Player Plays Rock
+                    roundScore += (1 + 6);
+                }
+                break;
+            }
+            default:
+                break;
             }
 
             totalScore += roundScore;
