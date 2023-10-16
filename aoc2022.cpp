@@ -1,21 +1,11 @@
-#include <stdio.h>
-#include <fstream>
 #include <iostream>
-#include <cctype>
 #include <vector>
-#include <cstring>
-#include <string>
-#include <algorithm>
 
 #include "extracted/aoc2022C1.cpp"
 #include "extracted/aoc2022C2.cpp"
 #include "extracted/aoc2022C3.cpp"
 
 using namespace std;
-
-// vector<int> aocChallenge1();
-// void aocChallenge2();
-// void aocChallenge3();
 
 int main(int argc, char *argv[]){
     int parse = -1;
@@ -52,7 +42,7 @@ int main(int argc, char *argv[]){
             break;
         }
         default:{
-            printf("Invalid input must be from 1 to 2\n");
+            printf("Invalid input must be from 1 to 3\n");
             break;
         }
     }
